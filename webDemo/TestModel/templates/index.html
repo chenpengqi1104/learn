@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script src="../static/js/index.js"></script>
+<title>index</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+	<style>
+	 body{
+	 background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552989000883&di=fdb7736dea2bd8d7f2e45a818c95a62b&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201703%2F11%2F26987f65570a0c35633f35910201f7a5.jpg')
+  }
+	
+	</style>
+	
+</head>
+
+<body >
+
+<div id="d1" class="container col" >
+  <h2 id="h1" class="display-1" align="center"><strong>欢迎来到鸿程大数据</strong></h2>
+   <hr>
+</div>
+
+<div >
+    <h4 id="h6"  align="center" style="color: snow;font-family: 李旭科书法"><strong style="color:red">{{a}}</strong></h4>
+</div>
+<div id="d2" align="center" >
+	<form id="f1" name="f1" action="/login/" method="POST" onsubmit="return validateForm()">
+	    <h6 style="color:red">{{info}}</h6>
+        <div style="display: none">{%csrf_token%}</div>
+		用户名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="username" required><br><br>
+		密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" required><br><br>
+        <div style="color: red">{{error}}</div>
+	
+		<div id="s1"><input type="submit" class="btn btn-outline-dark"  value="登录" id="s1" ></div>
+  </form>
+		
+</div>		
+	<div align="center"  style="font-family: '李旭科书法';color: red ;padding: 60px;float:left;margin-left:40%" >
+	<h4 class="h">如果您还未注册，请点击</h4><h6 class="display-4"><a href="/register">注册</a></h6>
+	
+	</div>
+	
+	
+	
+	
+</body>
+</html>

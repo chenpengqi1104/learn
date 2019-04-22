@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{%extends "list.html" %}
+<html>
+<head>
+<meta charset="utf-8">
+<title>添加人员</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+	
+  	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/list.css">
+	
+	
+</head>
+
+<body>
+
+ {% block mainbody %}
+ 
+	<script>
+        $.ajax({
+            type:"get",
+            url:"/show_pro",
+            dataType:"json",
+            success:function (data) {
+                $(data).each(
+                    function (i, values) {
+                        $("#list").append(
+                            "<tr><td>"+values.id+"</td>"
+                            +"<td>"+values.name+"</td>"
+                            +"<td>"+values.start+"</td>"
+                            +"<td>"+values.end+"</td>"
+                            +"<td>"+values.cycle+"</td>"
+                            +"<td>"+values.category+"</td>"
+                           +"<td><a href='delete_pro'><button >"+"删除"+"</button></a></td>"
+                            +"<td><a href='modify_pro'><button >"+"修改"+"</button ></a></td></tr>"
+                            
+                        );
+ 
+                    }
+                );
+            },
+        })
+        window.onload = success;
+    </script>
+    <div style="margin-left:65%">  
+      <form action="search_pro" method="POST">
+      {% csrf_token %}
+        <table>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+           <tr>
+            <td style="color:red"><h4>您可以快速搜索项目信息：</h4></td>
+            <td><input type="text" name="value" placeholder="请输入项目名称"></td>
+            <td><button type="submit" class="btn btn-success">搜索</button></td>
+          </tr>
+        
+        </table> 
+      </form>
+    </div>
+
+	<div id="d3" style="background-color:#FCFCFC;margin-top:58px">
+	
+	<h1 style="color:red">{{message}}</h1>
+	<h1 style="color:red">{{message1}}</h1>
+	<table class="table table-bordered table-hover table-condensed">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>项目名称</th>
+                    <th>开始时间</th>
+                    <th>结束时间</th>
+                    <th>周期</th>
+                    <th>类别</th>
+                    <th>操作</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="list"></tbody>
+</table>
+      
+	  <hr/>
+	  
+	<ul class="pagination" style="margin-top:3%;margin-left:38%">
+   
+    <li><a href="manageProject"><button type="button" class="btn btn-success">首页</button></a></li>
+    <li><a href="manageProject"><button type="button" class="btn btn-warning">上一页</button></a></li>
+    <li><a href="manageProject"><button type="button" class="btn btn-warning">下一页</button></a></li>
+   
+   
+    </ul>
+	  
+	  
+	  
+	</div>
+	
+{% endblock %}
+
+    
+</body>
+</html>

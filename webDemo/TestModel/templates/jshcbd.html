@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>江苏鸿程大数据人员管理系统</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+  body{
+    background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552989000883&di=fdb7736dea2bd8d7f2e45a818c95a62b&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201703%2F11%2F26987f65570a0c35633f35910201f7a5.jpg');
+  }
+h1{
+  margin-left:30%;
+}
+h3{
+  margin-left:45%;
+}
+.d1{
+margin-left:40%;
+margin-top:7%;
+
+
+} 
+.d2{
+
+margin-left:40%;
+margin-top:2%;
+
+} 
+
+ 
+
+</style>
+</head>
+
+<body >
+   
+   
+ 
+   <h1>欢迎来到江苏鸿程大数据后台人员管理系统</h1>
+   <h3>请先登录！</h3>
+   
+   
+   
+   <div class="d1">
+     <form  action="/login/" method="POST">
+     {% csrf_token %}
+     <table>
+      <tr>
+      <th></th>
+      <th style="color:red">{{ info }}</th>
+    </tr>
+    
+   <tr>
+   <td><h4>用户名:</h4></td>
+   <td><input type="text"  name="username" placeholder="请输入用户名"></td>
+   </tr>
+   <tr>
+   <td><h4>密码:</h4></td>
+   <td><input type="password"  name="password" placeholder="请输入密码"></td>
+   </tr>
+   <tr >
+   <td align="center" colspan="2"><button type="submit" class="btn btn-success">登陆</button><td>
+  
+   </tr>
+     </table>
+     </form>
+     
+    </div> 
+    
+    <div class="d2">
+    <table>
+     <tr>
+          <td><h4 style="color:red">没有账号？点击快速注册</h4></td>
+          <td align="center">  <a href="/regist"><button type="button" class="btn btn-warning btn-lg active">注册</button></a></td>
+     </tr>
+    
+    </table>
+    
+    </div>
+    
+    
+</body>
+</html>

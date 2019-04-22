@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color:#EEF5F9
+	
+}
+#d1{
+	
+	background-color: #1C81D9;
+	width: 93%;
+	height: 50px;
+	margin-left: 60px;
+	margin-right: 0px;
+	border: 1px solid #696;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	-moz-box-shadow: #666 0px 0px 10px;
+	box-shadow: #666 0px 0px 10px;
+}
+
+
+#d2{
+	margin-top: 30px;
+	position:static;
+	background-color:white;
+	width: 15%;
+	margin-left: 60px;
+	padding: 60px 0;
+	height: 700px;
+	float:left; 
+	text-align: center; 
+	border: 1px solid #696;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	-moz-box-shadow: #666 0px 0px 10px;
+	box-shadow: #666 0px 0px 10px;
+}
+#d2 ul li a:link{
+	border:medium;
+	font-family:"abel";
+	font-size: 20px;
+	color:#99ABB4;
+}
+a b :link:active{
+	text-align: inherit;
+	font-family:"abel";
+	font-size: 20px;
+	color:gray;
+}
+#d2 ul li a:link:hover{
+	height: 80px;
+	background-color:dimgrey;
+	font-family:"abel";
+	font-size: 20px;
+	color:#99ABB4;
+}
+#d2 ul li{
+	border: 1px solid #696;
+	
+	border: 8px;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	-moz-box-shadow: #666 0px 0px 10px;
+	
+	width: 100%;
+	height:80px;
+}
+
+#d3{
+	position:static;
+	background-color:white;
+	width: 70%;
+	margin-top: 30px;
+	margin-right: 80px;
+	padding: 60px 0;
+	height: 700px;
+	float:right; 
+	text-align: center; 
+	border: 1px solid #696;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	-moz-box-shadow: #666 0px 0px 10px;
+	box-shadow: #666 0px 0px 10px;
+	
+	
+}
+#d4{
+	position:static;
+	float: right;
+	background-color:white;
+	width: 70%;
+	margin-top: 30px;
+	margin-right: 80px;
+	padding: 60px 0;
+	height: 700px;
+	text-align: center; 
+	border: 1px solid #696;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: #666 0px 0px 10px;
+	-moz-box-shadow: #666 0px 0px 10px;
+	box-shadow: #666 0px 0px 10px;
+	
+	
+}

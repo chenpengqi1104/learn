@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>register</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/register.css">
+	<script src="../static/js/index1.js"></script>
+	<style>
+	span{
+      text-align:center;	
+	 color:red
+	}
+	</style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand float-lg col">
+  <ul class="nav nav-tabs">
+   <li class="nav-item active">
+      <a class="nav-link" href="/index" ><b>首页</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="help"><b>帮助</b></a>
+    </li>
+  </ul>
+		
+</nav>
+<div id="d2" align="center" >
+     <span>{{ message }}</span>
+	<form id="f1" name="f1" action="/regist2/" method="post" onsubmit="return validateForm()">
+        <div style="display: none">{%csrf_token%}</div>
+        <table style="border-collapse:separate; border-spacing:10px 20px;">
+
+            <tr><td > <div style="font-family: 楷体;font-size: 20px">姓名:</div></td><td ><input type="text" name="username" required></td><div style="color: red">{{error}}</div></tr>
+            <tr><td ><div style="font-family:楷体;font-size: 20px">密码:</div></td><td ><input id="p1" type="password" name="password" required></td></tr>
+            <tr><td ><div style="font-family:楷体;font-size: 20px">确认密码:</div></td><td ><input id="p2" type="password" name="password2" required></td></tr>
+            <tr><td><div style="font-family:楷体;font-size: 20px">邮箱:</div></td><td ><input type="email" name="email"></td></tr>
+
+        </table>
+
+		<div id="s1"><input type="submit" class="btn btn-outline-dark"  value="注册" id="s1" >
+         <button type="reset" class="btn btn-outline-dark">重置</button></div>
+   	</form>
+		
+</div>
+</body>
+</html>

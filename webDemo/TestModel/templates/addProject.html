@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+{%extends "list.html" %}
+<html>
+<head>
+<meta charset="utf-8">
+<title>添加项目</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/list.css">
+	
+	
+	<style>
+
+
+ 
+ body{
+ background-color:#D8D8D8
+ }
+ 
+ .d1{
+   margin-top:8%;
+   margin-left:42%;
+ }
+ h1{
+ text-align:center
+ }
+</style>
+</head>
+
+<body>
+
+   {% block mainbody %}
+	<div id="d3" style="background-color:#FCFCFC;margin-top:100px">
+		<h1 style="color:blue">新增项目信息</h1>
+<div class="d1" style="margin-left:5%;margin-top:6%">
+      <form action="/add_pro/" method="POST">
+      {% csrf_token %}
+         <table class="table table-hover">
+           
+            
+            <tr>
+             <td><h4>项目名称:</h4></td>
+             <td><input type="text"  name="proname" placeholder="请输入项目名称"></td>
+            </tr>
+            
+          
+            
+            <tr>
+             <td><h4>开始时间:</h4></td>
+             <td><input type="text"  name="starttime" placeholder="xxxx-xx-xx"></td>
+            </tr>
+            
+             <tr>
+             <td><h4>结束时间:</h4></td>
+             <td><input type="text"  name="endtime" placeholder="xxxx-xx-xx"></td>
+            </tr>
+            <tr>
+             <td><h4>项目周期:</h4></td>
+             <td><input type="text"  name="cycle" placeholder="请输入持续周期"></td>
+            </tr>
+            
+            <tr>
+             <td><h4>所属类型:</h4></td>
+             <td><select name="category" >
+                      <option></option>
+                      <option>国家级研究课题</option>
+                      <option>省部级研究课题</option>
+                      <option>企业合作项目</option>
+                      <option>自研项目</option>
+                    </select></td>
+            </tr>
+            
+            <tr>
+              <td><h4>企业名称:</h4></td>
+              <td> <input type="text"  name="class" placeholder="非企业合作项目无需输入"></td>
+            </tr>
+             <td align="center" colspan="2"><button type="submit" class="btn btn-success">提交</button></td>
+         
+         </table>      
+      
+      
+      </form>
+      <h2>{{ info }}</h2>
+   </div>
+		
+	</div>
+	
+{% endblock %}
+
+</body>
+</html>

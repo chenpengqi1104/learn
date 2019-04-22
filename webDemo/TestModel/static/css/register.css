@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-image: url(bk.jpg);
+	background-color:cornsilk;
+}
+a:link{
+	color: burlywood
+}
+#d2{
+
+	margin:auto;
+	width: 30%;
+
+	margin-top: 250px;
+	padding-top: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 30px;
+	background-image: url(bk.jpg);
+	filter:alpha(Opacity=50);
+	opacity: 0.8; 
+}
+#s1{
+	margin:auto;
+
+	
+}

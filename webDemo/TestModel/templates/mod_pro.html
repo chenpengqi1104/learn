@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{%extends "list.html" %}
+<html>
+<head>
+<meta charset="utf-8">
+<title>添加人员</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+	
+  	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/list.css">
+	
+	
+</head>
+
+<body>
+
+ {% block mainbody %}
+ 
+
+	<div id="d3" style="background-color:#FCFCFC">
+	
+		  <div style="float:left;margin-left:40%">
+	<h1 style="margin-bottom:30%;color:blue"> 修改项目信息</h1>
+	      <form action="/mod_pro/" method="POST">
+            {% csrf_token %}
+          <table class="table table-hover">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            
+            <tr>
+             <td><h5>所需修改的项目id:</h5></td>
+             <td><input type="text"  name="proid" placeholder="请输入id"></td>
+            </tr>
+            
+          
+            
+            <tr>
+             <td><h5>修改后开始时间:</h5></td>
+             <td><input type="text"  name="starttime" placeholder="xxxx-xx-xx"></td>
+            </tr>
+            
+             <tr>
+             <td><h5>修改后结束时间:</h5></td>
+             <td><input type="text"  name="endtime" placeholder="xxxx-xx-xx"></td>
+            </tr>
+            <tr>
+             <td><h5>修改后项目周期:</h5></td>
+             <td><input type="text"  name="cycle" placeholder="请输入持续周期"></td>
+            </tr>
+            
+            <tr>
+             <td><h5>修改后所属类型:</h5></td>
+             <td><select name="category" >
+                      <option></option>
+                      <option>国家级研究课题</option>
+                      <option>省部级研究课题</option>
+                      <option>企业合作项目</option>
+                      <option>自研项目</option>
+                    </select></td>
+            </tr>
+            
+            <tr>
+              <td><h5>企业名称:</h5></td>
+              <td> <input type="text"  name="class" placeholder="非企业合作项目无需输入"></td>
+            </tr>
+             <td align="center" colspan="2"><button type="submit" class="btn btn-success">修改</button></td>
+             <tr>
+              <td><h5 style="color:red">{{message1}}</h5></td>
+              
+            </tr>
+         </table>          
+         
+      
+      </form>
+	
+	
+	</div>
+	  
+	  
+	  
+	  
+	</div>
+	
+{% endblock %}
+
+    
+</body>
+</html>

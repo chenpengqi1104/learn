@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body style="background-color:#FCFCFC">
+<h2 style="text-align:center;color:blue">您要查询的员工信息如下：</h2>
+<div style="margin-top:5%">
+<table class="table">
+<thead>
+ <tr>
+                    <th>id</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>类别</th>
+                    <th>所属项目id</th>
+                    <th>所属项目名称</th>
+ 
+ </tr>
+ </thead>
+ <tbody>
+ <tr class="success">
+     <td>{{id}}</td>
+      <td>{{name}}</td>
+     <td>{{sex}}</td>
+     <td>{{age}}</td>
+     <td>{{category}}</td>
+     <td>{{proid}}</td>
+     <td><a href='manageProject'>{{proname}}</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

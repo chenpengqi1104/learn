@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>员工信息</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style>
+	body{
+	   background-color:#D8D8D8
+	}
+	h1{
+	   text-align:center;
+	   color:blue;
+	}
+	h2{
+	text-align:center;
+	color:red;
+	}
+	a{
+	margin-left:80px;
+	}
+	.a1{
+	margin-left:700px;
+	}
+	
+	
+	</style>
+</head>
+
+<body>
+   <h1>江苏鸿程大数据技术与应用研究院</h1>
+   <h2>员工-项目管理后台</h2>
+   
+
+<div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseOne">
+					<h3>员工信息</h3>
+				</a>
+				
+				<a href="/list_emp">列出员工</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="btn-group btn-group-lg">
+           <a class="a1" href="/new_emp"><button type="button" class="btn btn-success">新增员工</button></a>
+           <a><button type="button" class="btn btn-success">修改员工</button></a>
+           <a><button type="button" class="btn btn-success">删除员工</button></a>
+        </div>
+    </div>
+   
+                   <table class="table">
+                       <th>姓名</th><th>性别 </th><th>年龄 </th><th>类型</th><th>项目名称</th>
+                       <tr class="active"><td>{{ name }}</td><td>{{ sex }}</td><td>{{ age }}</td><td>{{ category }}</td><td>文本处理</td></tr>
+                       <tr class="active"><td>李四</td><td>男</td><td>35</td><td>大数据开发工程师</td><td>自然语言处理</td></tr>
+                      <tr class="active"><td>陈鹏奇</td><td>男</td><td>23</td><td>AI人工智能</td><td>机器学习</td></tr>
+                   </table>
+                </div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="panel panel-success">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseTwo">
+					<h3>项目信息</h3>
+				</a>
+				<a href="/list_pro">列出项目</a>
+			</h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+			
+			
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="btn-group btn-group-lg">
+          <a class="a1" href="/new_pro"> <button type="button" class="btn btn-success">新增项目</button></a>
+          <a> <button type="button" class="btn btn-success">修改项目</button></a>
+          <a> <button type="button" class="btn btn-success">删除项目</button></a>
+        </div>
+    </div>
+    <table class="table">
+        <th>项目名称</th><th>开始时间</th><th>结束时间</th><th>周期</th><th>种类</th>
+        <tr class="success"><td>文本处理</td><td>2016-4-18</td><td>2016-9-18</td><td>5个月</td><td>国家级</td></tr>
+        <tr class="success"><td>自然语言处理</td><td>2016-11-18</td><td>2017-3-18</td><td>4个月</td><td>国家级</td></tr>
+        <tr class="success"><td>机器学习</td><td>2017-1-18</td><td>2018-1-18</td><td>一年</td><td>世界级</td></tr>
+    </table>
+</div>
+			
+			
+			
+			
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseThree">
+					<h3> 员工-项目信息</h3>
+				</a>
+				
+				<a href="/list_emp_pro">列出员工-项目信息</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+			
+			
+			<div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="btn-group btn-group-lg">
+          <a class="a1" href="/new_pro"> <button type="button" class="btn btn-success">新增项目</button></a>
+          <a> <button type="button" class="btn btn-success">修改项目</button></a>
+          <a> <button type="button" class="btn btn-success">删除项目</button></a>
+        </div>
+    </div>
+    <table class="table">
+        <th>项目名称</th><th>开始时间</th><th>结束时间</th><th>周期</th><th>种类</th>
+        <tr class="warning"><td>文本处理</td><td>2016-4-18</td><td>2016-9-18</td><td>5个月</td><td>国家级</td></tr>
+        <tr class="warning"><td>自然语言处理</td><td>2016-11-18</td><td>2017-3-18</td><td>4个月</td><td>国家级</td></tr>
+        <tr class="warning"><td>机器学习</td><td>2017-1-18</td><td>2018-1-18</td><td>一年</td><td>世界级</td></tr>
+    </table>
+</div>
+			
+			
+			</div>
+		</div>
+	</div>
+	
+</div>
+<script type="text/javascript">
+	$(function () { $('#collapseFour').collapse({
+		toggle: false
+	})});
+	$(function () { $('#collapseTwo').collapse('show')});
+	$(function () { $('#collapseThree').collapse('toggle')});
+	$(function () { $('#collapseOne').collapse('hide')});
+</script> 
+
+ 
+
+</body>

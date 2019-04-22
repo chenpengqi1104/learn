@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>list.html</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  	
+	<link rel="stylesheet" type="text/css" href="../static/css/list.css">
+	<script src="../static/js/list.js"></script>
+	
+	
+	
+</head>
+
+<body style="background-color:#F0F0F0">
+
+
+	<div id="d1">
+		<div id="dd1" align="left" style="color: white;margin-left: 70px;margin-top: 6px">
+			<h3 style="margin-left:40%;color:red"><a href="/list" style="color:white">鸿程大数据后台管理系统</a></h3>
+			
+			<div id="dd2" style="float: right;font-family:'楷体'">{{username}}</div>
+			
+		</div>
+	</div>
+	
+<div id="d2" style="background-color:#FCFCFC;margin-top:100px">
+	
+ <ul class="nav nav-pills flex-column">
+   
+    <li class="nav-item">
+      <a class="nav-link" href="/managePerson"><b class="navbar-text">管理人员</b></a>
+    </li>
+	 <br>
+    <li class="nav-item">
+	<a class="nav-link " href="/manageProject"><b class="navbar-text">管理项目</b></a>
+    </li>
+    <br>
+     <li class="nav-item ">
+	<a class="nav-link " href="/addPeople"><b class="navbar-text">添加人员</b></a>
+    </li>
+	 <br>
+    <li class="nav-item">
+      <a class="nav-link" href="/addProject"><b class="navbar-text">添加项目</b></a>
+    </li>
+	
+  </ul>
+	<a href="/logout/"><img id="p1" src="u1.jpg" width="40" height="40"  alt="" style=" margin-top:180px "  /></a>
+</div>
+	 {% block mainbody %}
+	<div id="d3" style="background-color:#FCFCFC;margin-top:100px ">
+		<h1 style="color:blue">尊敬的{{info}},欢迎来到鸿程大数据人员后台</h1>
+		<div style="height:200px"></div>
+		<h2 style="color:red"><<<<<您可以在左侧边栏选择需要进行的操作</h2>
+	</div>
+	
+{% endblock %}
+</body>
+</html>

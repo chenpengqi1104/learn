@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+{%extends "list.html" %}
+<html>
+<head>
+<meta charset="utf-8">
+<title>添加人员</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+	
+  	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/list.css">
+	
+	
+	
+	
+
+ 
+</head>
+
+<body>
+
+
+
+ {% block mainbody %}
+ 
+ <script type="text/javascript" src="../static/js/jquery-1.4.2.js"></script>
+ 
+	
+
+	<div id="d3" style="background-color:#FCFCFC">
+
+	<div style="float:left;margin-left:40%">
+	<h1 style="margin-bottom:30%;color:blue"> 修改员工信息</h1>
+	      <form action="/mod_emp/" method="POST">
+      {% csrf_token %}
+         <table class="table table-hover">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            
+            <tr>
+             <td><h5>需要修改的员工id</h5></td>
+             <td><input type="text"  name="empid" placeholder="请输入id"></td>
+            </tr>
+            
+            
+            
+            <tr>
+             <td><h5>修改后所属类型:</h5></td>
+             <td><select name="category" >
+                      <option></option>
+                      <option>正式员工</option>
+                      <option>实习员工</option>
+                      <option>PASA实验室学生</option>
+                      	
+                    </select></td>
+            </tr>
+            
+            <tr>
+              <td><h5>学生年级:</h5></td>
+              <td> <input type="text"  name="class" placeholder="非PASA实验室学生无需输入"></td>
+            </tr>
+            
+            <tr>
+              <td><h5>所属项目id:</h5></td>
+              <td> <input type="text"  name="proid" placeholder="所属项目的id"></td>
+            </tr>
+            <tr>
+              <td><h5>所属项目名称:</h5></td>
+              <td> <input type="text"  name="proname" placeholder="所属项目的名称"></td>
+            </tr>
+         
+          <tr>
+           <td align="center" colspan="2"><button type="submit" class="btn btn-success">修改</button></td>
+    
+          </tr>
+          <tr>
+              <td><h5 style="color:red">{{message1}}</h5></td>
+              
+            </tr>
+         </table>      
+         
+      
+      </form>
+	
+	
+	</div>
+	
+	
+	
+	</div>
+	
+    
+{% endblock %}
+
+    
+</body>
+</html>

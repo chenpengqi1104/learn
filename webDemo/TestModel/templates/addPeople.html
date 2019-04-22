@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{%extends "list.html" %}
+<html>
+<head>
+<meta charset="utf-8">
+<title>添加人员</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+	
+  	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/list.css">
+	
+	
+	<style>
+
+ body{
+ background-color:#D8D8D8
+ }
+ 
+ 
+ h1{
+ text-align:center
+ }
+ .d2{
+ 
+   margin-top:500px;
+   margin-left:42%;
+ 
+ }
+ 
+ 
+</style>
+</head>
+
+<body>
+
+ {% block mainbody %}
+	<div id="d3" style="background-color:#FCFCFC;margin-top:100px">
+	
+		<h1 style="color:blue">新增员工信息</h1>
+		
+     <div id="dd" style="margin-left:5%;margin-top:6%">
+      <form action="/add_emp/" method="POST">
+      {% csrf_token %}
+         <table class="table table-hover">
+           
+            
+            <tr>
+             <td><h4>员工姓名:</h4></td>
+             <td><input type="text"  name="empname" placeholder="请输入员工姓名"></td>
+            </tr>
+            
+           <tr>
+             <td><h4>员工性别:</h4></td>
+             <td><input type="radio"  name="empsex" placeholder="请输入员工性别" value="男" checked>男&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"  name="empsex" placeholder="请输入员工性别" value="女">女</td>
+            
+            </tr>
+            
+            <tr>
+             <td><h4>员工年龄:</h4></td>
+             <td><input type="text"  name="empage" placeholder="请输入员工年龄"></td>
+            </tr>
+            
+            <tr>
+             <td><h4>所属类型:</h4></td>
+             <td><select name="category" >
+                      <option></option>
+                      <option>正式员工</option>
+                      <option>实习员工</option>
+                      <option>PASA实验室学生</option>
+                      	
+                    </select></td>
+            </tr>
+            
+            <tr>
+              <td><h4>学生年级:</h4></td>
+              <td> <input type="text"  name="class" placeholder="非PASA实验室学生无需输入"></td>
+            </tr>
+         
+          <tr>
+           <td align="center" colspan="2"><button type="submit" class="btn btn-success">提交</button></td>
+    
+          </tr>
+         </table>      
+         
+      
+      </form>
+      </div>
+      <h2>{{ info }}</h2>
+      
+      
+   </div>
+		
+
+	
+
+{% endblock %}
+
+    
+</body>
+</html>

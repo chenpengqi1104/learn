@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>注册</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<style>
+	body{
+	 background-image:url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552989000883&di=fdb7736dea2bd8d7f2e45a818c95a62b&imgtype=0&src=http%3A%2F%2Fimg17.3lian.com%2Fd%2Ffile%2F201703%2F11%2F26987f65570a0c35633f35910201f7a5.jpg')
+	}
+	.d1{
+	     margin-left:40%;
+         margin-top:10%;
+         
+         width:300px;
+         height:250px
+	}
+	h1{
+	margin-left:40%;
+	}
+	
+	
+	</style>
+</head>
+
+<body>
+  <h1>管理员注册页</h1>
+  
+  
+  <div class="d1" >
+   <form action="/regist2/" method="POST">
+   {% csrf_token %}
+   <table >
+  
+  <tbody>
+  <tr>
+  
+    <th></th>
+    <th style="color:red">  {{  message }}</th>
+  </tr>
+   
+    <tr>
+      <td><h4>姓名:</h4></td>
+      <td><input type="text"  name="username" placeholder="请输入用户名"></td>
+     </tr>
+    
+    <tr>
+      <td><h4>密码:</h4></td>
+      <td><input type="password"  name="password" placeholder="请输入密码"></td>
+     </tr>
+     
+     <tr>
+      <td><h4>确认密码:</h4></td>
+      <td><input type="password"  name="password2" placeholder="请再次输入密码"></td>
+     </tr>
+     
+     <tr>
+      <td><h4>邮箱:</h4></td>
+      <td><input type="text"  name="email" placeholder="请输入邮箱"></td>
+     </tr>
+     
+    <tr>
+      <td align="center" colspan="2"><button type="submit" class="btn btn-success">注册</button></td>
+    
+    </tr>
+  </tbody>
+  
+
+</table>
+</form>
+
+</div>
+
+
+</body>
